@@ -17,6 +17,7 @@ export const updateSlidesListener = (dispatch: (value: Action) => void) => {
 				position: slide.position,
 				slidePreview: slide.previewImage,
 			};
+
 		});
 
 		dispatch({ type: "SET_SLIDES_PREVIEWS", payload: newSlides });

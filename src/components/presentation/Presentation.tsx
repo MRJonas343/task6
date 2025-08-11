@@ -1,17 +1,17 @@
 "use client";
 
-import { Dropdown, SlidePreview, TextArea, Toolbar, UserProfile } from ".";
-import { updateSlidesPositions, exportToPdf } from "@/Services";
-import { useEffect, useReducer, useRef } from "react";
+import { DndContext } from "@dnd-kit/core";
 import { SortableContext } from "@dnd-kit/sortable";
 import { Button, Divider } from "@nextui-org/react";
-import { reducer, initialState } from "./state";
-import { SlideDropDown } from "./SlideDropDown";
 import { useParams } from "next/navigation";
-import { DndContext } from "@dnd-kit/core";
-import { useDndSensors } from "@/hooks";
+import { useEffect, useReducer, useRef } from "react";
 import { socket } from "@/constants";
+import { useDndSensors } from "@/hooks";
+import { exportToPdf, updateSlidesPositions } from "@/Services";
 import * as sockets from "@/sockets";
+import { Dropdown, SlidePreview, TextArea, Toolbar, UserProfile } from ".";
+import { SlideDropDown } from "./SlideDropDown";
+import { initialState, reducer } from "./state";
 import * as tools from "./tools";
 
 export const Presentation = () => {

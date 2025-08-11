@@ -1,9 +1,9 @@
 "use client";
 
 import { Button } from "@nextui-org/react";
+import { AnimatePresence, motion } from "framer-motion";
 import { FC } from "react";
 import { DropdownProps } from "@/interfaces";
-import { motion, AnimatePresence } from "framer-motion";
 
 export const Dropdown: FC<DropdownProps> = ({
 	state,
@@ -59,7 +59,7 @@ export const Dropdown: FC<DropdownProps> = ({
 							radius="sm"
 							className="w-full bg-[#18181b] justify-start hover:border-1 border-gray-700"
 						>
-							Chage Color
+							Change Color
 						</Button>
 					) : (
 						<>
@@ -68,7 +68,7 @@ export const Dropdown: FC<DropdownProps> = ({
 								radius="sm"
 								className="w-full bg-[#18181b] justify-start hover:border-1 border-gray-700"
 							>
-								Chage Border Color
+								Change Border Color
 							</Button>
 							<Button
 								onClick={fillElement}

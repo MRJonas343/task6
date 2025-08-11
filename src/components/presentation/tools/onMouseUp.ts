@@ -61,7 +61,7 @@ export const onMouseUp = (
 		return;
 	}
 
-	if (state.editorMode === "cursor" && state.clickedCanvasElement) {
+	if (state.editorMode === "cursor" && state.clickedCanvasElement && state.modifiedElement) {
 		const newElements = state.drawnElements.map((element) =>
 			element.id === state.modifiedElement?.id
 				? state.modifiedElement
