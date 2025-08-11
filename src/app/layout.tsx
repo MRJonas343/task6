@@ -1,11 +1,14 @@
-import { Providers } from "./providers";
 import type { Metadata } from "next";
 import { oswald } from "./fonts/font";
+import { Providers } from "./providers";
 import "./globals.css";
 
 export const metadata: Metadata = {
-	title: "Task 6",
-	description: "Colaborative Presentation Software",
+	title: "Collaborative Presentation Software",
+	description: "Create and share presentations in real-time with others.",
+	icons: {
+		icon: "/logo.png",
+	},
 };
 
 export default function RootLayout({
